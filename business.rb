@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 $LOAD_PATH << '.'
-require 'buyer_seller_product_module.rb'
-require 'business.rb'
-require 'buyer_seller_product_scenario.rb'
+require 'users_products_details.rb'
+require 'users_details.rb'
 require 'products_details.rb'
 
 user_obj = BuyerSeller.new
@@ -12,7 +13,7 @@ puts user_obj.get_user_details(user_details)
 puts product_obj.get_product_details(product_details)
 puts user_obj.get_buyer_name(user_details)
 puts user_obj.get_seller_name(user_details)
-puts user_obj.get_age(user_details)
+puts user_obj.get_age(user_details[1])
 puts user_obj.get_all_buyer_name(user_details)
 puts user_obj.get_all_seller_name(user_details)
 puts user_obj.find_by_name(user_details)
